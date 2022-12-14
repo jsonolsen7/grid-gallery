@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F64488;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 16px 32px;
+}
+
+nav a:hover {
+    background-color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas:
+        "img1 img2 img3 img3"
+        "img1 img4 img5 img6"
+        "img7 img7 img8 img6";
+}
+
+.gallery a {
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-decoration: none;
+}
+
+.img1 {
+    grid-area: img1;
+    min-height: 51.5rem;
+    background-image: url("images/sunflowers.jpg");
+}
+
+.img2 {
+    grid-area: img2;
+    background-image: url("images/hydrangea.jpg");
+}
+
+.img3 {
+    grid-area: img3;
+    background-image: url("images/tulips.jpg");
+}
+
+.img4 {
+    grid-area: img4;
+    background-image: url("images/poppies.jpg");
+}
+
+.img5 {
+    grid-area: img5;
+    background-image: url("images/dahlia.jpg");
+}
+
+.img6 {
+    grid-area: img6;
+    min-height: 51.5rem;
+    background-image: url("images/daisies.jpg");
+}
+
+.img7 {
+    grid-area: img7;
+    background-image: url("images/cherry-blossoms.jpg");
+}
+
+.img8 {
+    grid-area: img8;
+    background-image: url("images/roses.jpg");
+}
+
+@media screen and (max-width: 980px) {
+    .gallery {
+        grid-template-areas:
+            "img1 img1 img2 img2"
+            "img1 img1 img3 img3"
+            "img4 img4 img5 img5"
+            "img6 img7 img7 img7"
+            "img8 img8 img8 img8";
+    }
+
+    .gallery a {
+        height: 20rem;
+    }
+
+    .img1 {
+        min-height: 41.5rem;
+    }
+
+    .img6 {
+        min-height: 20rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-areas:
+            "img1 img1 img1 img1"
+            "img2 img2 img2 img2"
+            "img3 img3 img3 img3"
+            "img4 img4 img4 img4"
+            "img5 img5 img5 img5"
+            "img6 img6 img6 img6"
+            "img7 img7 img7 img7"
+            "img8 img8 img8 img8";
+    }
+
+    .gallery a,
+    .img1,
+    .img6 {
+        min-height: 30rem;
+        height: 30rem;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 16px;
+    }
+}
