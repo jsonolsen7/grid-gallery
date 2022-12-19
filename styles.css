@@ -41,6 +41,10 @@ nav a:hover {
     background-color: white;
 }
 
+#icon {
+    display: none;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -148,7 +152,11 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 18px;
-        padding: 16px;
+        display: none;
+    }
+
+    #icon {
+        display: block;
+        font-size: 24px;
     }
 }
